@@ -19,7 +19,7 @@ A comprehensive Python project for Excel data preprocessing and visualization.
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/meta_data_analysis.git
+git clone https://git@github.com:fareedcodez/meta_data_analysis.git
 cd meta_data_analysis
 
 # Create a virtual environment (optional but recommended)
