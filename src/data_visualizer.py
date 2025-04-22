@@ -245,8 +245,10 @@ class DataVisualizer:
         plt.close()
         
         # Create a focused heatmap of the top correlated features
-        if 'top_pairs' in self.analysis_results[df.name]["correlation"]:
-            top_pairs = self.analysis_results[df.name]["correlation"]['top_pairs']
+        sheet_name = str(df.name) if hasattr(df, 'name') else 'Unknown'
+        if sheet_name in self.analysis_results and "correlation" in self.analysis_results[sheet_name]:
+            if self.analysis_results[sheet_name]["correlation"] and 'top_pairs' in self.analysis_results[sheet_name]["correlation"]:
+                top_pairs = self.analysis_results[sheet_name]["correlation"]['top_pairs']
             if top_pairs:
                 # Extract unique columns from top pairs
                 top_cols = set()

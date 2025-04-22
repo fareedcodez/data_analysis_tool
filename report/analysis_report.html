@@ -1,0 +1,337 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Data Analysis Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; color: #333; }
+            h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+            h2 { color: #3498db; margin-top: 30px; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+            h3 { color: #7f8c8d; margin-top: 25px; }
+            table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+            th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+            th { background-color: #f2f2f2; color: #333; }
+            tr:nth-child(even) { background-color: #f9f9f9; }
+            .summary { background-color: #ecf0f1; padding: 15px; border-radius: 5px; margin: 20px 0; }
+            .insights { background-color: #e8f4fd; padding: 15px; border-radius: 5px; margin: 20px 0; }
+            .good { color: #27ae60; }
+            .warning { color: #e67e22; }
+            .bad { color: #c0392b; }
+            .viz-section { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+            .viz-item { border: 1px solid #ddd; padding: 10px; border-radius: 5px; }
+            .viz-item h4 { margin-top: 0; color: #3498db; }
+            .viz-item img { max-width: 100%; height: auto; }
+            .correlation-table { max-height: 400px; overflow-y: auto; }
+            .highlight { background-color: #ffffcc; }
+        </style>
+    </head>
+    <body>
+        <h1>Data Analysis Report</h1>
+        <p>Generated on: 2025-04-23 02:36:43</p>
+    
+        <div class="summary">
+            <h2>Analysis Summary</h2>
+    
+            <h3>Sheet: meta data</h3>
+            <ul>
+                <li>Original rows: 8437, columns: 17</li>
+                <li>After preprocessing: rows: 8268, columns: 18</li>
+                <li>Numeric columns: 7</li>
+                <li>Categorical columns: 11</li>
+                <li>Date columns: 0</li>
+            </ul>
+        
+        </div>
+    
+        <h2>Detailed Analysis: meta data</h2>
+        
+        <h3>Column Information</h3>
+        <table>
+            <tr>
+                <th>Column Name</th>
+                <th>Data Type</th>
+                <th>Non-Null Count</th>
+                <th>Description</th>
+            </tr>
+        
+            <tr>
+                <td>id</td>
+                <td>float64</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Min:</strong> 10192344.50, <strong>Max:</strong> 10577042.00<br>
+                <strong>Mean:</strong> 10451215.82, <strong>Median:</strong> 10504165.00
+                <br><strong>Distribution:</strong> <span class="warning">Left-skewed</span></td>
+            </tr>
+            
+            <tr>
+                <td>name</td>
+                <td>object</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Unique values:</strong> 6723 (81.3% of total rows)
+                </td>
+            </tr>
+            
+            <tr>
+                <td>gender</td>
+                <td>object</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Unique values:</strong> 2 (0.0% of total rows)
+                <br><strong>Top categories:</strong><br>Female: 8252 (99.8%)<br>Male: 16 (0.2%)<br></td>
+            </tr>
+            
+            <tr>
+                <td>date_of_birth</td>
+                <td>object</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Unique values:</strong> 2731 (33.0% of total rows)
+                </td>
+            </tr>
+            
+            <tr>
+                <td>sponsor</td>
+                <td>object</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Unique values:</strong> 21 (0.3% of total rows)
+                </td>
+            </tr>
+            
+            <tr>
+                <td>region</td>
+                <td>object</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Unique values:</strong> 22 (0.3% of total rows)
+                </td>
+            </tr>
+            
+            <tr>
+                <td>district</td>
+                <td>object</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Unique values:</strong> 57 (0.7% of total rows)
+                </td>
+            </tr>
+            
+            <tr>
+                <td>ward</td>
+                <td>object</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Unique values:</strong> 335 (4.1% of total rows)
+                </td>
+            </tr>
+            
+            <tr>
+                <td>pulse</td>
+                <td>float64</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Min:</strong> 70.50, <strong>Max:</strong> 90.50<br>
+                <strong>Mean:</strong> 80.67, <strong>Median:</strong> 80.00
+                <br><strong>Distribution:</strong> <span class="">Uniform-like</span></td>
+            </tr>
+            
+            <tr>
+                <td>resp</td>
+                <td>float64</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Min:</strong> 16.50, <strong>Max:</strong> 20.50<br>
+                <strong>Mean:</strong> 18.20, <strong>Median:</strong> 18.00
+                <br><strong>Distribution:</strong> <span class="">Slightly skewed</span></td>
+            </tr>
+            
+            <tr>
+                <td>temp</td>
+                <td>float64</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Min:</strong> 35.55, <strong>Max:</strong> 36.75<br>
+                <strong>Mean:</strong> 36.20, <strong>Median:</strong> 36.20
+                <br><strong>Distribution:</strong> <span class="">Uniform-like</span></td>
+            </tr>
+            
+            <tr>
+                <td>sys</td>
+                <td>float64</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Min:</strong> 114.50, <strong>Max:</strong> 126.50<br>
+                <strong>Mean:</strong> 120.78, <strong>Median:</strong> 121.00
+                <br><strong>Distribution:</strong> <span class="">Uniform-like</span></td>
+            </tr>
+            
+            <tr>
+                <td>dia</td>
+                <td>float64</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Min:</strong> 66.00, <strong>Max:</strong> 82.00<br>
+                <strong>Mean:</strong> 73.80, <strong>Median:</strong> 74.00
+                <br><strong>Distribution:</strong> <span class="">Uniform-like</span></td>
+            </tr>
+            
+            <tr>
+                <td>diagnoses</td>
+                <td>object</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Unique values:</strong> 713 (8.6% of total rows)
+                </td>
+            </tr>
+            
+            <tr>
+                <td>procedures</td>
+                <td>object</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Unique values:</strong> 144 (1.7% of total rows)
+                </td>
+            </tr>
+            
+            <tr>
+                <td>medications</td>
+                <td>object</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Unique values:</strong> 3980 (48.1% of total rows)
+                </td>
+            </tr>
+            
+            <tr>
+                <td>outcome</td>
+                <td>object</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Unique values:</strong> 6 (0.1% of total rows)
+                <br><strong>Top categories:</strong><br>Home: 7540 (91.2%)<br>Home : 708 (8.6%)<br>Referral: 8 (0.1%)<br>Death: 7 (0.1%)<br>Death : 4 (0.0%)<br></td>
+            </tr>
+            
+            <tr>
+                <td>id_log</td>
+                <td>float64</td>
+                <td>8268 / 8268 (100%)</td>
+                <td>
+                <strong>Min:</strong> 16.14, <strong>Max:</strong> 16.17<br>
+                <strong>Mean:</strong> 16.16, <strong>Median:</strong> 16.17
+                <br><strong>Distribution:</strong> <span class="warning">Left-skewed</span></td>
+            </tr>
+            
+        </table>
+        
+        <div class="insights">
+            <h3>Key Insights</h3>
+        
+                <h4>Strongest Correlations:</h4>
+                <table>
+                    <tr>
+                        <th>Variable 1</th>
+                        <th>Variable 2</th>
+                        <th>Correlation</th>
+                    </tr>
+                
+                    <tr>
+                        <td>id</td>
+                        <td>id_log</td>
+                        <td class="good">1.000</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>sys</td>
+                        <td>dia</td>
+                        <td class="">0.480</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>pulse</td>
+                        <td>resp</td>
+                        <td class="warning">0.120</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>temp</td>
+                        <td>sys</td>
+                        <td class="warning">-0.080</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>resp</td>
+                        <td>sys</td>
+                        <td class="warning">0.070</td>
+                    </tr>
+                    
+                </table>
+                
+                <h4>Distribution Types:</h4>
+                <ul>
+                <li>Left-skewed: 2 column(s)</li><li>Slightly skewed: 1 column(s)</li><li>Uniform-like: 4 column(s)</li>
+                </ul>
+                
+                <h4>Highly Skewed Columns:</h4>
+                <ul>
+                <li>id: -1.23 (left-skewed)</li><li>id_log: -1.24 (left-skewed)</li>
+                </ul>
+                
+        </div>
+        
+            <h3>Key Visualizations</h3>
+            <p>Here are some key visualizations that provide insights into the data:</p>
+            
+                <div class="viz-section">
+                    <div class="viz-item">
+                        <h4>Correlation Heatmap</h4>
+                        <p>Shows the strength of relationships between numeric variables.</p>
+                        <img src="../visualizations/meta data/correlation_heatmap.png" alt="Correlation Heatmap">
+                    </div>
+                
+                    <div class="viz-item">
+                        <h4>Pair Plot</h4>
+                        <p>Shows relationships between pairs of numeric variables.</p>
+                        <img src="../visualizations/meta data/pair_plot.png" alt="Pair Plot">
+                    </div>
+                    
+                </div>
+                
+            <h4>Distribution Plots</h4>
+            <div class="viz-section">
+            
+                <div class="viz-item">
+                    <h4>Combined Distributions</h4>
+                    <p>Overview of key numeric variable distributions.</p>
+                    <img src="../visualizations/meta data/combined_distributions.png" alt="Combined Distributions">
+                </div>
+                
+                <div class="viz-item">
+                    <h4>Categorical Distributions</h4>
+                    <p>Distribution of key categorical variables.</p>
+                    <img src="../visualizations/meta data/combined_pie_charts.png" alt="Categorical Distributions">
+                </div>
+                
+            </div>
+            
+                <h4>Category Relationships</h4>
+                <div class="viz-section">
+                
+                    <div class="viz-item">
+                        <h4>Categorical Relationship 1</h4>
+                        <p>How categories affect numeric values.</p>
+                        <img src="../visualizations/meta data/boxplot_gender_vs_temp.png" alt="Box Plot">
+                    </div>
+                    
+                    <div class="viz-item">
+                        <h4>Categorical Relationship 2</h4>
+                        <p>How categories affect numeric values.</p>
+                        <img src="../visualizations/meta data/boxplot_gender_vs_resp.png" alt="Box Plot">
+                    </div>
+                    
+                </div>
+                
+    </body>
+    </html>
+    

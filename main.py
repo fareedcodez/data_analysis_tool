@@ -149,7 +149,7 @@ def main():
     
     # Set name attribute for each dataframe (needed for some visualizations)
     for sheet_name, df in dataframes.items():
-        df.name = sheet_name
+        df.name = str(sheet_name)  # Ensure it's a string
     
     # 3. Preprocess data
     print("\nPREPROCESSING DATA...")

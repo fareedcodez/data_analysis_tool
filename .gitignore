@@ -1,0 +1,11 @@
+# Python virtual environment
+venv/
+
+# Environment variables
+.env
+
+# Excel and other data files
+meta.xlsx
+*.xlsx
+*.xls
+*.csv

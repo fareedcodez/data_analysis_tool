@@ -1,0 +1,69 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Data Analysis Summary</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; color: #333; }
+            h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+            h2 { color: #3498db; margin-top: 30px; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+            h3 { color: #7f8c8d; margin-top: 25px; }
+            .summary { background-color: #ecf0f1; padding: 15px; border-radius: 5px; margin: 20px 0; }
+            .insight { background-color: #e8f4fd; padding: 10px; border-radius: 5px; margin: 10px 0; }
+            .good { color: #27ae60; }
+            .warning { color: #e67e22; }
+            .bad { color: #c0392b; }
+        </style>
+    </head>
+    <body>
+        <h1>Data Analysis Summary Report</h1>
+        <p>Generated on: 2025-04-23 02:36:43</p>
+        
+        <div class="summary">
+            <h2>Dataset Overview</h2>
+    
+            <p>This dataset contains 1 sheet(s) with a total of 8437 rows and 17 columns.</p>
+            <h3>Sheets:</h3>
+            <ul>
+    <li><strong>meta data</strong>: 8437 rows, 17 columns</li>
+            </ul>
+        </div>
+        
+        <h2>Key Findings</h2>
+    
+        <h3>Sheet: meta data</h3>
+        <div class="insight">
+        <h4>Key Relationships:</h4><ul>
+                <li>There is a <strong>strong positive</strong> correlation (1.00) 
+                between <strong>id</strong> and <strong>id_log</strong></li>
+                
+                <li>There is a <strong>moderate positive</strong> correlation (0.48) 
+                between <strong>sys</strong> and <strong>dia</strong></li>
+                
+                <li>There is a <strong>moderate positive</strong> correlation (0.12) 
+                between <strong>pulse</strong> and <strong>resp</strong></li>
+                </ul><h4>Distribution Insights:</h4><ul>
+                    <li><strong>id</strong> has a <strong>left-skewed</strong> distribution, 
+                    suggesting outliers or natural asymmetry</li>
+                    
+                    <li><strong>id_log</strong> has a <strong>left-skewed</strong> distribution, 
+                    suggesting outliers or natural asymmetry</li>
+                    </ul>
+        </div>
+        
+    <h2>Recommendations</h2>
+    <div class="insight">
+        <ul>
+    
+            <li>Review the full analysis report for detailed insights</li>
+            <li>Examine the correlation heatmap to understand relationships between variables</li>
+            <li>For skewed variables, consider transformations (log, square root) before modeling</li>
+            <li>Check box plots to understand how categories affect numeric variables</li>
+        </ul>
+    </div>
+    
+    <p><a href="analysis_report.html">View Full Analysis Report</a></p>
+    
+    </body>
+    </html>
+    
