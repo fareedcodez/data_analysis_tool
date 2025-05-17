@@ -49,7 +49,7 @@ python main.py
 ## Project Structure
 
 ```
-meta_data_analysis/
+data_analysis_tool/
 ├── README.md
 ├── requirements.txt
 ├── src/
