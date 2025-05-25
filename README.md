@@ -4,7 +4,7 @@ A comprehensive Python project for Excel data preprocessing and visualization.
 
 ## Features
 
-- **Data Loading**: Read data from Excel files, handling multiple sheets
+- **Data Loading**: Read data from Excel files, handling multiple sheets at once
 - **Data Preprocessing**: Clean data, handle missing values, transform features
 - **Data Analysis**: Generate summary statistics and correlation analysis
 - **Data Visualization**: Create insightful visualizations for better understanding
